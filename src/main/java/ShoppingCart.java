@@ -25,7 +25,7 @@ public class ShoppingCart {
     public String getTotal(){
         return String.format("$%.2f",this.total);
     }
-//    public Invoice shipOrder(String name, String address, String city, String state, int zip){
-//        return new Invoice(name,address,city,state,zip,shippingCost,this.items);
-//    }
+    public Invoice shipOrder(String name, String address, String city, String state, int zip){
+        return new Invoice(name,address,city,state,zip,shippingCost,this.total,this.items);
+    }
 }
