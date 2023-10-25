@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 
 public class Calculator implements Calculatable{
-    private ArrayList<String> history = new ArrayList<String>();
+    private ArrayList<String> history;
+    public Calculator(){
+        this.history = new ArrayList<String>();
+    }
+
     public Integer add(Integer number1, Integer number2) {
         history.add(number1 + " + " + number2 + " = " + (number1 + number2));
         return number1 + number2;
