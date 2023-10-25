@@ -18,9 +18,9 @@ public class ShoppingCart {
     public void calculateTotal(){
         for(Item i : this.items){
             this.total+=i.getPrice()*i.getAmount();
-//            if(i.getPrice()<10)this.total+=this.shippingCost;
+            if(i.getPrice()<10)this.total+=this.shippingCost;
         }
-//        this.total*=1.1;
+        this.total*=1.1;
     }
     public String getTotal(){
         return String.format("$%.2f",this.total);
